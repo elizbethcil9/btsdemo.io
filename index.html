@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>btsworld.com</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  
+  body {font-family: "Lato", sans-serif}
+  .mySlides {display: none}
+
+      * {box-sizing: border-box;}
+
+    .img-zoom-container {
+      position: relative;
+    }
+
+    .img-zoom-lens {
+      position: absolute;
+      border: 1px solid #d4d4d4;
+      /*set the size of the lens:*/
+      width: 40px;
+      height: 40px;
+    }
+
+    .img-zoom-result {
+      border: 1px solid #d4d4d4;
+      /*set the size of the result div:*/
+      width: 300px;
+      height: 300px;
+    }
+</style>
+
+</head>
+<body>
+
+<!-- Audio -->
+<audio controls autoplay>
+  <source src="tunes/heart.ogg" type="audio/ogg">
+  <source src="tunes/heart.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DIARY</a>
+
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="html/page2.html" class="w3-bar-item w3-button">Music Videos</a>
+        <a href="html/page3.html" class="w3-bar-item w3-button">Merchandise</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="html/page2.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MUSIC VIDEOS</a>
+  <a href="html/page3.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="images/dance.jpeg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-text-white w3-padding-32 w3-hide-small">
+      <h3 style="max-width:100%; height:auto">PERMISSION TO DANCE</h3>
+      <h5 style="max-width:100%; height:auto"><b>BTS Concert Tour Tickets Out Now!</b></h5>   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="images/smooth.jpeg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-text-blacks w3-padding-32 w3-hide-small">
+        <h3 style="max-width:100%; height:auto">Butter</h3>
+      <h5 style="max-width:100%; height:auto"><b>So smooth.</b></h5>    
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="images/stage.png" style="width:100%">
+    <div class="w3-display-bottommiddle w3-text-white w3-padding-32 w3-hide-small">
+      <h3 style="max-width:100%; height:auto">Love BTS?</h3>
+      <h5 style="max-width:100%; height:auto"><b>Catch them in action.</b></h5>    
+    </div>
+  </div>
+
+  <!-- The ABOUT Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">BANGTAN BOYS</h2>
+    <p class="w3-opacity"><i>7 boys. 1 universe.</i></p>
+    <p class="w3-justify">BTS, short for 방탄소년단 (BangTan Sonyeondan) which translates into Bulletproof Boy Scouts, is a South Korean boy band under Big Hit Entertainment. It's name is derived from the members' hopes to "block out stereotypes, criticisms, and expectations" that are experienced by adolescents. The band was formed in 2010 and made their first debut on June 13, 2013. They have a large global fanbase consisting of an estimated 22 million fans, which are known as the A.R.M.Y - the acronym for 'Adorable Representative M.C. For Youth' - which corresponds with their band's name. </p>
+
+    <!-- The INTRODUCTION Section -->
+    <div class="w3-row w3-padding-32">
+
+      <div class="w3-third" style="padding-left: 25px; padding-right:25px;">
+        <p><b>Jin (Kim Seok Jin)</b></p>
+        <img src="images/jin.jpeg" class="w3-round w3-margin-bottom" alt="Kim Seok Jin" width="500" height="150" style="max-width:80%;height:auto;">
+        
+        <br>
+        <button onclick="myFunction_more_jin()">Show / Hide</button>
+        <br>
+
+        <div id="jin">
+          <p class="city">Jin is a sub-vocalist and in-charge of 'visuals' which means 'having an attractive appearance' in Korean pop culture. He was born on 4 December 1992 and a Sagittarius based on astrology. Some famous solo tracks by him include "Awake", "Epiphany" and "Moon".</p>
+        </div>
+      
+        <script>
+          function myFunction_more_jin() {
+            var x = document.getElementById("jin");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } 
+
+            else {
+              x.style.display = "none";
+            }
+            }
+        </script>
+      </div>
+
+
+      <div class="w3-third" style="padding-left: 25px; padding-right:25px;">
+        <p><b>Suga (Min Yoon Gi)</b></p>
+        <img src="images/suga.jpeg" class="w3-round w3-margin-bottom" alt="Min Yoon Gi" width="500" height="150" style="max-width:80%;height:auto;">
+        
+        <br>
+        <button onclick="myFunction_more_suga()">Show / Hide</button>
+        <br>
+
+        <div id="suga">
+          <p class="city">Suga holds the position of the lead rapper in BTS. He was born on 9 March 1993 and an Pisces based on astrology. He is also known as Agust D where he produces famous solo tracks such as "Agust D" and "Daechwita", a label separate from BTS.</p>
+        </div>
+      </div>
+      
+        <script>
+          function myFunction_more_suga() {
+            var x = document.getElementById("suga");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } 
+
+            else {
+              x.style.display = "none";
+            }
+            }
+        </script>
+
+
+      <div class="w3-third" style="padding-left: 25px; padding-right:25px;">
+        <p><b>J-Hope (Jung Ho Seok)</b></p>
+        <img src="images/jhope.jpeg" class="w3-round w3-margin-bottom" alt="J-Hope" width="500" height="150" style="max-width:80%;height:auto;">
+        
+        <br>
+        <button onclick="myFunction_more_hope()">Show / Hide</button>
+        <br>
+
+        <div id="hope">
+          <p class="city">J-Hope holds the position of main dancer and sub-rapper in BTS. He was born on 18 February 1994 and an Aquarius based on astrology. His famous singles include "Chicken Noodle Soup" that took TikTok by storm, and a mixtape named "Hope World".</p>
+        </div>
+      
+        <script>
+          function myFunction_more_hope() {
+            var x = document.getElementById("hope");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } 
+
+            else {
+              x.style.display = "none";
+            }
+            }
+        </script>
+      </div>
+    </div>    
+
+
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third" style="padding-left: 25px; padding-right:25px;">
+        <p><b>RM (Kim Nam Joon)</b></p>
+        <img src="images/rm.jpeg" class="w3-round w3-margin-bottom" alt="Kim Nam Joon" width="500" height="150" style="max-width:80%;height:auto;">
+        
+        <br>
+        <button onclick="myFunction_more_rm()">Show / Hide</button>
+        <br>
+
+        <div id="rm">
+          <p class="city">RM, aka Rap Monster, is the band's brainy leader and main rapper. He was born on 12 September 1994 and a Virgo based on astrology. He is widely known as a genius with an IQ of 148 and was part of the nation's top 1% in the university entrance examinations. His solo mixtapes include "RM" and "Mono".</p>
+        </div>
+      
+        <script>
+          function myFunction_more_rm() {
+            var x = document.getElementById("rm");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } 
+
+            else {
+              x.style.display = "none";
+            }
+            }
+        </script>
+      </div>
+
+
+      <div class="w3-third" style="padding-left: 25px; padding-right:25px;">
+        <p><b>Jimin (Park Ji Min)</b></p>
+        <img src="images/jimin.jpeg" class="w3-round w3-margin-bottom" alt="Park Ji Min" width="500" height="150" style="max-width:80%;height:auto;">
+        
+        <br>
+        <button onclick="myFunction_more_jm()">Show / Hide</button>
+        <br>
+
+        <div id="jm">
+          <p class="city">Jimin holds the position of the lead vocalist and main dancer in BTS. He was born on 13 October 1995 and a Libra based on astrology. Being able to reach the highest notes out of all the members, he is often responsible for them in the band's songs. Famous songs by him include "Lie", "Intro: Serendipity" and "Promise".</p>
+        </div>
+      
+        <script>
+          function myFunction_more_jm() {
+            var x = document.getElementById("jm");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } 
+
+            else {
+              x.style.display = "none";
+            }
+            }
+        </script>
+      </div>
+
+
+      <div class="w3-third" style="padding-left: 25px; padding-right:25px;">
+        <p><b>V (Kim Tae Hyung)</b></p>
+        <img src="images/v.jpeg" class="w3-round w3-margin-bottom" alt="Kim Tae Hyung" width="500" height="150" style="max-width:80%;height:auto;">
+        
+        <br>
+        <button onclick="myFunction_more_v()">Show / Hide</button>
+        <br>
+
+        <div id="v">
+          <p class="city">V is the sub-vocalist and lead dancer of BTS. He was born on 30 December 1995 and a Capricon based on astrology. He is often noticed for his ethereal and jaw-dropping good looks that never ceases to shock the world. His famous singles include "Winter Bear", "Scenery" and Singularity".</p>
+        </div>
+      
+        <script>
+          function myFunction_more_v() {
+            var x = document.getElementById("v");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } 
+
+            else {
+              x.style.display = "none";
+            }
+            }
+        </script>
+      </div>
+    </div> 
+
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third" style="padding-left: 25px; padding-right:25px;">
+        <p><b>Jungkook (Jeon Jung Kook)</b></p>
+        <img src="images/jk.jpeg" class="w3-round w3-margin-bottom" alt="Jeon Jung Kook" width="500" height="150" style="max-width:80%;height:auto;">
+        
+        <br>
+        <button onclick="myFunction_more_jk()">Show / Hide</button>
+        <br>
+
+        <div id="jk">
+          <p class="city">Jungkook is the golden maknae (meaning 'the youngest' in Korean culture), main vocalist and lead dancer of BTS. He was born on 1 September 1997 and a Virgo based on astrology. He is known to the most talented member of BTS and is great at almost everything - music, games, sports, general knowledge. You name it, we got it. His singles include "Begin" and "Euphoria".</p>
+        </div>
+      
+        <script>
+          function myFunction_more_jk() {
+            var x = document.getElementById("jk");
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } 
+
+            else {
+              x.style.display = "none";
+            }
+            }
+        </script>
+      </div>
+    </div>
+
+
+  <br>
+  <hr>
+  <br>
+
+  <!-- The Tour Section -->
+  <div class="w3-brown" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">TOUR DATES</h2>
+      <p class="w3-opacity w3-center"><i>PERMISSION TO DANCE ON STAGE: Catch the boys in Las Vegas now!</i></p><br>
+
+  <img src="images/concert.jpeg" class="center" style="width:100%">
+
+      <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      </style>
+
+      <br>
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding">8 April 2022 <span class="w3-tag w3-red w3-right w3-margin-left">Popular!</span></li>
+        <li class="w3-padding">9 April 2022<span class="w3-tag w3-green w3-right w3-margin-left">Available</span></li>
+        <li class="w3-padding">15 April 2022<span class="w3-tag w3-green w3-right w3-margin-left">Available</span></li>
+        <li class="w3-padding">15 April 2022<span class="w3-tag w3-green w3-right w3-margin-left">Available</span></li>
+      </ul>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/alle.jpeg" alt="Las Vegas" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Las Vegas</b></p>
+            <p class="w3-opacity">Fri 8 Apr 2022</p>
+            <p>Allegiant Stadium, Las Vegas, Nevada, USA </p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href='https://www.ticketmaster.com/bts-tickets/artist/2110227'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/alle.jpeg" alt="LV" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Las Vegas</b></p>
+            <p class="w3-opacity">Sat 9 Apr 2022</p>
+            <p>Allegiant Stadium, Las Vegas, Nevada, USA.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href='https://www.ticketmaster.com/bts-tickets/artist/2110227'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/alle.jpeg" alt="LV" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Las Vegas</b></p>
+            <p class="w3-opacity">Fri 15 Apr 2022</p>
+            <p>Allegiant Stadium, Las Vegas, Nevada, USA.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href='https://www.ticketmaster.com/bts-tickets/artist/2110227'">Buy Tickets</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br>
+<hr>
+
+  <!-- Diary/ Comment Section -->
+  <div class="w3-container w3-content w3-padding-63" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">DIARY</h2>
+    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+      <div style="text-align: center;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScAv5VkFZBWTpgIctyd0s4p9_Z7VJ2Yj6-FRx00nWIC8MyVvQ/viewform?embedded=true" width ="100%" height = "650" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+   </div>
+
+
+<!-- End Page Content -->
+</div>
+
+<script>
+
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

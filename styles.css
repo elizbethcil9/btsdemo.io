@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  background-color: ivory;
+}
+
+p {
+  text-align: justify;
+  margin-left: 15%;
+  margin-right: 10%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: Linen;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.text {
+  background-color: white;
+  color: black;
+  font-size: 10vw; /* Responsive font size */
+  font-weight: bold;
+  margin: 0 auto; /* Center the text container */
+  padding: 10px;
+  width: 50%;
+  text-align: center; /* Center text */
+  position: absolute; /* Position text */
+  top: 50%; /* Position text in the middle */
+  left: 50%; /* Position text in the middle */
+  transform: translate(-50%, -50%); /* Position text in the middle */
+  mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+
+.mySlides {display: none}
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .zoom {
+    padding: 0px;
+    background-color: grey;
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .zoom:hover {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+  }
+
+
+.images_zoom {
+  height: 100%;
+  width: 100%;
+
+}
+
+h3 {
+   color: #2e536f;
+   font-weight: bold;
+   font-family: sans-serif;
+   font-size: 4em;
+   text-transform: uppercase;
+   text-shadow:
+     -1px -1px 0 #fff,
+      1px -1px 0 #fff,
+     -1px 1px 0 #fff,
+      1px 1px 0 #fff,
+     -2px -5px 0px #ff7c7c;
+}
+
+h5 {
+   color: white;
+   font-family: arial;
+   font-size: 1.9em;
+   text-shadow:
+     -1px -1px 0 black,
+      1px -1px 0 black,
+     -1px 1px 0 black,
+      1px 1px 0 black;
+}
